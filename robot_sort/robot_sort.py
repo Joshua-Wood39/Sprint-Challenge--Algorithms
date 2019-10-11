@@ -107,8 +107,8 @@ class SortingRobot:
                 self.move_right()  # grab the first, then begin comparison
                 if self.compare_item() > 0:
                     self.swap_item()
-                    self.move_left()  # swapping out items
-                    self.swap_item()
+                    self.move_left()  # pushing the smaller items down
+                    self.swap_item()  # while 'bubbling' the greater items up
                     self.move_right()
                     self.set_light_off()  # reset the boolean
                 else:
